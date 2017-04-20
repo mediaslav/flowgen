@@ -46,7 +46,7 @@ export const printType = (type: RawNode) => {
     case SyntaxKind.LastTypeNode:
     case SyntaxKind.TypePredicate:
       if (type.literal) {
-        return type.literal.text;
+        return JSON.stringify(type.literal.text);
       }
       
       if (type.type.typeName) {
